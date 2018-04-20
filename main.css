@@ -1,0 +1,38 @@
+body {
+  background-image: url('http://2mlyl2eanf41pq5h03csafz15gi.wpengine.netdna-cdn.com/wp-content/uploads/2016/08/playarincon-1-1200x600.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Container1 {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(220, 154, 55);
+  border-radius: 9px;
+}
+.homeButton {
+  font-family:  'Gugi', cursive;
+  cursor: pointer;
+  color: #E9EFF2;
+  background-color: rgb(220, 154, 55);
+  padding: 25px;
+  font-size: 23px;
+
+}
+.homeButton:hover {
+  background-color: rgb(225, 180, 45);
+}
+
+.nav {
+  font-family:  'Gugi', cursive;
+  cursor: pointer;
+  color: #E9EFF2;
+  background-color: rgb(220, 154, 55);
+  padding: 25px;
+  font-size: 20px;
+}
+
+.nav:hover {
+  background-color: rgb(225, 180, 45);
+}
