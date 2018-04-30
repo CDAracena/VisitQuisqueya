@@ -11,6 +11,68 @@ body {
   background-color: rgb(220, 154, 55);
   border-radius: 9px;
 }
+
+#mainContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(220, 154, 55, 0.8);
+  font-family: 'Gugi', cursive;
+  margin-top: 170px;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(220, 154, 55);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content a {
+  color: #E9EFF2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Gugi', cursive;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(225, 180, 45)
+}
+.dropdown:hover .dropdown-content {
+  display:block;
+}
+.dropdown:hover .bookTrip {
+  background-color: rgb(225, 180, 45);
+}
+
+.mainClass {
+  color: #E9EFF2;
+  animation: move 3s infinite alternate;
+}
+
+img {
+  border-radius: 12%;
+}
+
+
+@keyframes move {
+  0%{
+    left: 0px;
+  }
+  100% {
+    left: 21px;
+  }
+}
 .homeButton {
   font-family:  'Gugi', cursive;
   cursor: pointer;
@@ -20,8 +82,10 @@ body {
   font-size: 23px;
 
 }
+
 .homeButton:hover {
   background-color: rgb(225, 180, 45);
+  border-radius: 7px;
 }
 
 .nav {
@@ -35,4 +99,31 @@ body {
 
 .nav:hover {
   background-color: rgb(225, 180, 45);
+  border-radius: 7px;
+}
+
+@media (max-width: 600px) {
+  #Container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 9%;
+  }
+
+
+  .nav {
+    text-align: center;
+    padding: 17px;
+    font-size: 20px;
+  }
+
+  .homeButton {
+    text-align: center;
+    padding: 17px;
+    font-size: 20px;
+  }
+  #mainContainer {
+    flex-direction: column;
+    margin-top: 50px;
+  }
 }
