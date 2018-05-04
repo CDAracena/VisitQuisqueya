@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="icon" href="http://files.softicons.com/download/web-icons/north-america-flags-icons-by-studiotwentyeight/png/256/Dominican-Republic.png">
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
     <meta charset="utf-8">
     <title>Visit Quisqueya</title>
   </head>
   <body>
-
-  <div id="Container1">
-  <div class="homeButton"> <i class="fa fa-home w3-xxlarge">Home </i></div>
-    <div class="nav">About Dominican Republic </div>
-    <div class="nav">Discover Dominican Republic </div>
-    <div class="dropdown">
-    <div class="nav bookTrip">Book A Trip</div>
-    <div class="dropdown-content">
-      <a href="https://www.jetblue.com/vacations/santo-domingo-vacations/#/" target="_blank">Santo Domingo </a>
-      <a href="https://www.jetblue.com/bestfarefinder/?origin=LGA&destination=STI#/" target="_blank">Santiago </a>
-      <a href="https://www.jetblue.com/bestfarefinder/?origin=LGA&destination=PUJ#/" target="_blank">Punta Cana </a>
-    </div>
-  </div>
-    <div class="nav">Contact Us </div>
-  </div>
-
-  <div id="mainContainer">
-    <div class="mainClass"> <h2>Santo Domingo </h2>
-      <img src="https://i2.wp.com/www.themasculinetraveler.com/wp-content/uploads/2017/02/Santo-Domingo-Dominican-Republic.jpg?w=650&ssl=1" height="auto" width="400">
-      <p id="santoDomingo" class="mainClass"><strong>Visit the New World's first historic destination. A city filled with life 24/7 and
-        historic architecture all around. Plenty of nightlife activities and easily navigable locations.</strong></p>
+    <div class="container-fluid text-center py-2 rounded-bottom navMenu">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-12 menuOption">
+          <img src="palmtree.png" class="img-responsive img-fluid palmTree">
+          Home
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 menuOption">
+          Discover Dominican Republic
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 menuOption">
+          Book A Trip <i class="fa fa-suitcase"></i>
+        </div>
+      </div>
     </div>
 
-    <div class="mainClass"> <h2>Santiago </h2>
-      <img src="https://res-1.cloudinary.com/abroad101/image/upload/c_limit,h_800,w_800/v1450117667/Program_4987_ProfilePhoto__c068.jpg" height="auto" width="400">
-      <p id="santiago" class="mainClass"> <strong>Visit the Dominican Republic's historic Santiago province. Visit the national monument which is rumored
-        to have the remains of Christopher Columbus deep inside its colossal structure. Santiago is more relaxed, but is still very much alive at night.
-        Enjoy the local bars, clubs and local street festivities or get some peace of mind in the nearby countryside. </strong></p>
-  </div>
-
-    <div class="mainClass"> <h2>Punta Cana </h2>
-    <img src="http://wpnature.com/wp-content/uploads/2017/01/beach-punta-cana-dominican-republic-vacation-tourist-sand-pool-resort-swim-caribbean-wallpaper-style.jpg" height="266" width="400">
-    <p id="puntaCana" class="mainClass"> <strong>The world famous Punta Cana! Well known for its extensive selection of hotels, resorts and beautiful beaches.
-    Come enjoy your stay at any of the resorts we have. Customer service 24/7, live performances, great drinks, food and the nightlife reigns supreme.</strong> </p>
-  </div>
-</div>
-
-
-<script src="main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
