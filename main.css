@@ -19,3 +19,14 @@ body {
 .menuOption {
   cursor: pointer;
 }
+
+.weatherNphotos {
+  margin-top: 30px;
+}
+
+.weatherApp {
+  font-family: 'Nobile', sans-serif;
+  background-color: #70722eb3;
+  color: floralwhite;
+
+}
