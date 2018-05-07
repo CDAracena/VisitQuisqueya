@@ -34,3 +34,8 @@ body {
   color: floralwhite;
   font-family: 'Nobile', sans-serif;
 }
+
+.btnCollection {
+  color: floralwhite;
+  border: 0px;
+}
