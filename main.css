@@ -46,3 +46,8 @@ body {
   background-color: floralwhite;
   color: #519eaf;
 }
+
+.carouselImgs {
+  border-radius: 10px;
+  width: 250px;
+}
