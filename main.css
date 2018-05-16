@@ -51,3 +51,34 @@ body {
   border-radius: 10px;
   width: 250px;
 }
+
+.bookTrip {
+  background-color: #96b9cc6b;
+  display: none;
+}
+
+.tripSelector {
+  font-size: 20px;
+  font-family: 'Nobile', cursive;
+  background-color: #469aac99;
+  color: floralwhite;
+  border-style: solid;
+  border-color: floralwhite;
+  border-radius: 4px;
+  border-width: 2px;
+}
+
+.travelersDiv {
+  font-size: 20px;
+  color: #469aac;
+  font-family: 'Nobile', cursive;
+}
+
+.travelersInput {
+  background-color: #519eafbf;
+  border-radius: 7px;
+  text-align: center;
+  color: floralwhite;
+  border-color: floralwhite;
+  border-style: solid;
+}

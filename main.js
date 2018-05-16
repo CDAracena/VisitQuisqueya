@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  let tripBooker = document.querySelector('.bookATrip');
+
+  tripBooker.addEventListener('click', function() {
+    document.querySelector('.bookTrip').style.display = "block"
+  })
+
   $(function() {
     $('#myCarousel').carousel();
   });
@@ -21,6 +27,8 @@ $(document).ready(function() {
       this.cityIcon = response.data.list[0].weather[0].icon;
     }
   }
+
+
 
   // The stuff below works just fine.
 
@@ -64,4 +72,39 @@ $(document).ready(function() {
       })
   })
 
-});
+  axios.get('http://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
+    .then(function(response) {
+
+      let SantoDomingo = new cityInfo(response);
+
+      cityChanger.innerText = SantoDomingo.cityName;
+      weatherChanger.innerText = "Current temperature: " + Math.round((SantoDomingo.cityTemp - 273));
+      humidityChanger.innerText = "Humidity: " + SantoDomingo.cityHumidity + "%";
+      iconChanger.src = "https://openweathermap.org/img/w/" + SantoDomingo.cityIcon + ".png";
+
+    })
+
+
+  let travelersCheck = document.querySelector('.travelersInput');
+  let toolTipAdder = document.createAttribute("data-toggle");
+  let toolTipPlacement = document.createAttribute("data-placement")
+  let toolTipTitle = document.createAttribute("title");
+
+  toolTipAdder.value = "tooltip";
+  toolTipPlacement.value = "top";
+  toolTipTitle.value = "Please input a number"
+
+
+  travelersCheck.addEventListener('keyup', function() {
+    if (travelersCheck.value == "") {
+      alert('Please input a number')
+      //     document.querySelector(".travelersDiv").setAttribute(toolTipAdder);
+      //     document.querySelector(".travelersDiv").setAttribute(toolTipPlacement);
+      //     document.querySelector(".travelersDiv").setAttribute(toolTipTitle);
+    }
+    //
+  })
+
+
+
+})
