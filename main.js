@@ -86,23 +86,18 @@ $(document).ready(function() {
 
 
   let travelersCheck = document.querySelector('.travelersInput');
-  let toolTipAdder = document.createAttribute("data-toggle");
-  let toolTipPlacement = document.createAttribute("data-placement")
-  let toolTipTitle = document.createAttribute("title");
-
-  toolTipAdder.value = "tooltip";
-  toolTipPlacement.value = "top";
-  toolTipTitle.value = "Please input a number"
+  let toolTipAdder = document.querySelector('.toolTip');
 
 
   travelersCheck.addEventListener('keyup', function() {
-    if (travelersCheck.value == "") {
-      alert('Please input a number')
-      //     document.querySelector(".travelersDiv").setAttribute(toolTipAdder);
-      //     document.querySelector(".travelersDiv").setAttribute(toolTipPlacement);
-      //     document.querySelector(".travelersDiv").setAttribute(toolTipTitle);
+
+    if (travelersCheck.value === "") {
+      toolTipAdder.style.display = "block";
+    } else if (travelersCheck.value !== "") {
+      toolTipAdder.style.display = "none";
+      toolTipAdder.style.animationFillMode = "forwards";
     }
-    //
+
   })
 
 
