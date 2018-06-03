@@ -111,3 +111,21 @@ body {
     opacity: 0.0;
   }
 }
+
+@keyframes fadeInBook {
+  0% {
+    opacity: 0.0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}

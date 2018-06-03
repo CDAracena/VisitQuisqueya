@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   tripBooker.addEventListener('click', function() {
     document.querySelector('.bookTrip').style.display = "block"
+    document.querySelector('.bookTrip').style.animation = "fadeInBook 2s forwards"
   })
 
   $(function() {
