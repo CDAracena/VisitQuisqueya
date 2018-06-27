@@ -102,5 +102,14 @@ $(document).ready(function() {
   })
 
 
+  let destination = document.querySelector(".tripSelector")
+  let departureDate = document.querySelector(".departureDate");
+  let returnDate = document.querySelector(".returnDate");
+  let initialInfo = document.querySelector(".submitPrimaryInfo");
+
+  initialInfo.addEventListener('click', function() {
+    console.log("Your destination is " + destination.value + " departure date:" + departureDate.value + " and return date:" + returnDate.value)
+  })
+
 
 })
