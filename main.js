@@ -34,7 +34,7 @@ $(document).ready(function() {
   // The stuff below works just fine.
 
   SantoDomingoClicker.addEventListener('click', function() {
-    axios.get('http://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
+    axios.get('https://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
       .then(function(response) {
 
         let SantoDomingo = new cityInfo(response);
@@ -48,7 +48,7 @@ $(document).ready(function() {
   })
 
   SantiagoClicker.addEventListener('click', function() {
-    axios.get("http://api.openweathermap.org/data/2.5/forecast?id=3492914&APPID=d2759249bf9ce3e1e3b6a45433e4299f")
+    axios.get("https://api.openweathermap.org/data/2.5/forecast?id=3492914&APPID=d2759249bf9ce3e1e3b6a45433e4299f")
       .then(function(response) {
 
         let Santiago = new cityInfo(response);
@@ -61,7 +61,7 @@ $(document).ready(function() {
   })
 
   PuntaCanaClicker.addEventListener('click', function() {
-    axios.get("http://api.openweathermap.org/data/2.5/forecast?id=3494242&APPID=d2759249bf9ce3e1e3b6a45433e4299f")
+    axios.get("https://api.openweathermap.org/data/2.5/forecast?id=3494242&APPID=d2759249bf9ce3e1e3b6a45433e4299f")
       .then(function(response) {
 
         let PuntaCana = new cityInfo(response);
@@ -73,7 +73,7 @@ $(document).ready(function() {
       })
   })
 
-  axios.get('http://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
+  axios.get('https://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
     .then(function(response) {
 
       let SantoDomingo = new cityInfo(response);
