@@ -89,8 +89,12 @@ $(document).ready(function() {
   let travelersCheck = document.querySelector('.travelersInput');
   let toolTipAdder = document.querySelector('.toolTip');
 
+  function generateTravelerForms() {
+    let nameForms = "<div class='row userNameInfoRow col-lg-12 mx-auto justify-content-center'><div class='col-lg-4 text-left py-2'>First Name <input type:'text' class='form-control'></div><div class='col-lg-4 text-left py-2'>Last Name <input type='text' class='form-control'></div> <span class='float-right closingButton'>&times</span> </div>"
+    return nameForms
+  }
 
-  travelersCheck.addEventListener('keyup', function() {
+  travelersCheck.addEventListener('change', function() {
 
     if (travelersCheck.value === "") {
       toolTipAdder.style.display = "block";
@@ -98,12 +102,13 @@ $(document).ready(function() {
       toolTipAdder.style.display = "none";
       toolTipAdder.style.animationFillMode = "forwards";
     }
+    for (let i = 0; i < travelersCheck.value; i++) {
+      let UserMainContainer = document.querySelector('.userInfoContainer');
+      let userInfoInnerContainer = document.createElement("DIV");
+      userInfoInnerContainer.innerHTML = generateTravelerForms();
+      UserMainContainer.appendChild(userInfoInnerContainer);
+    }
   })
-
-  function generateTravelerForms() {
-    let nameForms = "<div class='row'><div class='col-lg-4'>First Name <input type:'text' class='form-control'></div> <div class='col-lg-4>Last Name <input type='text' class='form-control'></div> </div>"
-    return nameForms
-  }
 
 
 
@@ -116,5 +121,12 @@ $(document).ready(function() {
     console.log("Your destination is " + destination.value + " departure date:" + departureDate.value + " and return date:" + returnDate.value)
   })
 
+  let userNameButtonClosers = document.querySelectorAll('.closingButton');
+  let userNameInfoRows = document.querySelectorAll('.userNameInfoRow');
+  for (let i = 0; i < userNameButtonClosers.length; i++) {
+    userNameButtonCloser[i].addEventListener('click', function() {
+      userNameInfoRows[i].style.display = "none";
 
+    })
+  }
 })
