@@ -57,6 +57,8 @@ body {
   background-color: #96b9cc6b;
   display: none;
   box-shadow: -1px 1px 5px #e2dcdb;
+  color: #e2eae7;
+  text-shadow: 1px 1px #519eaf;
 }
 
 .tripSelector {
@@ -130,4 +132,17 @@ body {
   100% {
     opacity: 0.9;
   }
+}
+
+.closingButton {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.closingButton:hover {
+  color: darkred;
+  transition: color;
+  transition-timing-function: ease-in;
+  cursor: pointer;
 }
