@@ -98,8 +98,13 @@ $(document).ready(function() {
       toolTipAdder.style.display = "none";
       toolTipAdder.style.animationFillMode = "forwards";
     }
-
   })
+
+  function generateTravelerForms() {
+    let nameForms = "<div class='row'><div class='col-lg-4'>First Name <input type:'text' class='form-control'></div> <div class='col-lg-4>Last Name <input type='text' class='form-control'></div> </div>"
+    return nameForms
+  }
+
 
 
   let destination = document.querySelector(".tripSelector")
