@@ -75,8 +75,9 @@ body {
 
 .travelersDiv {
   font-size: 20px;
-  color: #1C5967;
+  color: #e2eae7;
   font-family: 'Nobile', cursive;
+  text-shadow: 1px 1px #469aac99;
 }
 
 .travelersInput {
@@ -145,4 +146,10 @@ body {
   transition: color;
   transition-timing-function: ease-in;
   cursor: pointer;
+}
+
+.userNameInputBox:hover {
+  box-shadow: 1px 1px 2px 1px lightgrey;
+  box-sizing: border-box;
+  border: 1px solid darkgrey;
 }

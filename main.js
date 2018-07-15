@@ -90,7 +90,7 @@ $(document).ready(function() {
   let toolTipAdder = document.querySelector('.toolTip');
 
   function generateTravelerForms() {
-    let nameForms = "<div class='row userNameInfoRow col-lg-12 mx-auto justify-content-center'><div class='col-lg-4 text-left py-2'>First Name <input type:'text' class='form-control'></div><div class='col-lg-4 text-left py-2'>Last Name <input type='text' class='form-control'></div> <span class='float-right closingButton'>&times</span> </div>"
+    let nameForms = "<div class='row userNameInfoRow col-lg-12 mx-auto justify-content-center'><div class='col-lg-4 text-left py-2'>First Name <input type:'text' class='form-control userNameInputBox firstName'></div><div class='col-lg-4 text-left py-2'>Last Name <input type='text' class='form-control userNameInputBox lastName'></div> <span class='float-right closingButton'>&times</span> </div>"
     return nameForms
   }
 
@@ -107,6 +107,13 @@ $(document).ready(function() {
       let userInfoInnerContainer = document.createElement("DIV");
       userInfoInnerContainer.innerHTML = generateTravelerForms();
       UserMainContainer.appendChild(userInfoInnerContainer);
+      let userNameButtonClosers = document.querySelectorAll('.closingButton');
+      let userNameInfoRows = document.querySelectorAll('.userNameInfoRow');
+      for (let j = 0; j < userNameInfoRows.length; j++) {
+        userNameButtonClosers[j].addEventListener('click', function() {
+          userNameInfoRows[j].style.display = "none";
+        })
+      }
     }
   })
 
@@ -118,15 +125,21 @@ $(document).ready(function() {
   let initialInfo = document.querySelector(".submitPrimaryInfo");
 
   initialInfo.addEventListener('click', function() {
+    let travelers = [];
+    let userInfoRows = document.querySelectorAll('.userNameInfoRow')
+    let fName = document.querySelectorAll('.firstName')
+    let lName = document.querySelectorAll('.lastName')
+
+    for (let i = 0; i < userInfoRows.length; i++) {
+      travelers.push({
+        firstName: fName[i],
+        lastName: lName[i]
+      })
+      console.log(travelers[i].firstName.value + ' ' + travelers[i].lastName.value)
+    }
+
     console.log("Your destination is " + destination.value + " departure date:" + departureDate.value + " and return date:" + returnDate.value)
   })
 
-  let userNameButtonClosers = document.querySelectorAll('.closingButton');
-  let userNameInfoRows = document.querySelectorAll('.userNameInfoRow');
-  for (let i = 0; i < userNameButtonClosers.length; i++) {
-    userNameButtonCloser[i].addEventListener('click', function() {
-      userNameInfoRows[i].style.display = "none";
 
-    })
-  }
 })
