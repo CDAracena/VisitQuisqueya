@@ -101,7 +101,7 @@
   <div class="toolTip"><strong>Please input a number</strong>
   </div>
   <div class="container bookTrip">
-    <div class="row py-4 mx-auto justify-content-center">
+    <div class="row py-4 mx-auto justify-content-center selectionRow">
       <div class="col-lg-4 text-center">
         <select class="tripSelector py-1">
           <option>Pick Your Destination</option>
@@ -115,7 +115,7 @@
 
       <div class="col-lg-4 travelersDiv">
 
-        <span><strong>Number of Travelers: </strong></span><input type="number" placeholder="#" min="0" max="50" class="travelersInput">
+        <span><strong>Add Travelers: </strong></span><input type="number" placeholder="#" min="0" max="10" class="travelersInput">
       </div>
     </div>
     <div class="userInfoContainer justify-content-center">
@@ -135,6 +135,16 @@
     <div class="row mx-auto justify-content-center">
       <div class="col-lg-12 text-center">
         <button type="button" class="btn btnCollection submitPrimaryInfo">Submit </button>
+      </div>
+    </div>
+    <div class="row mx-auto justify-content-center py-3 tripConfirmationRow">
+      <div class="col-lg-12  text-center destinationConfirmationBox">
+      </div>
+      <div class="col-lg-12 text-center travelersNames">
+      </div>
+      <div class="col-lg-4 text-center departureDateBox">
+      </div>
+      <div class="col-lg-4 text-center returnDateBox">
       </div>
     </div>
   </div>

@@ -95,20 +95,22 @@ $(document).ready(function() {
   }
 
   travelersCheck.addEventListener('change', function() {
-
+    let UserMainContainer = document.querySelector('.userInfoContainer');
+    let userNameInfoRows;
+    let userNameButtonClosers;
     if (travelersCheck.value === "") {
       toolTipAdder.style.display = "block";
-    } else if (travelersCheck.value !== "") {
+    } else
+    if (travelersCheck.value !== "") {
       toolTipAdder.style.display = "none";
       toolTipAdder.style.animationFillMode = "forwards";
     }
     for (let i = 0; i < travelersCheck.value; i++) {
-      let UserMainContainer = document.querySelector('.userInfoContainer');
-      let userInfoInnerContainer = document.createElement("DIV");
-      userInfoInnerContainer.innerHTML = generateTravelerForms();
+      userInfoInnerContainer = document.createElement("DIV");
       UserMainContainer.appendChild(userInfoInnerContainer);
-      let userNameButtonClosers = document.querySelectorAll('.closingButton');
-      let userNameInfoRows = document.querySelectorAll('.userNameInfoRow');
+      userInfoInnerContainer.innerHTML = generateTravelerForms();
+      userNameButtonClosers = document.querySelectorAll('.closingButton');
+      userNameInfoRows = document.querySelectorAll('.userNameInfoRow');
       for (let j = 0; j < userNameInfoRows.length; j++) {
         userNameButtonClosers[j].addEventListener('click', function() {
           userNameInfoRows[j].style.display = "none";
@@ -122,23 +124,27 @@ $(document).ready(function() {
   let destination = document.querySelector(".tripSelector")
   let departureDate = document.querySelector(".departureDate");
   let returnDate = document.querySelector(".returnDate");
-  let initialInfo = document.querySelector(".submitPrimaryInfo");
+  let submitTravelButton = document.querySelector(".submitPrimaryInfo");
 
-  initialInfo.addEventListener('click', function() {
+  submitTravelButton.addEventListener('click', function() {
     let travelers = [];
+    let travelDiv = document.querySelectorAll('.travelersDiv')
     let userInfoRows = document.querySelectorAll('.userNameInfoRow')
     let fName = document.querySelectorAll('.firstName')
     let lName = document.querySelectorAll('.lastName')
 
-    for (let i = 0; i < userInfoRows.length; i++) {
+    for (let i = 0; i < fName.length; i++) {
       travelers.push({
-        firstName: fName[i],
-        lastName: lName[i]
+        firstName: fName[i].value,
+        lastName: lName[i].value
       })
-      console.log(travelers[i].firstName.value + ' ' + travelers[i].lastName.value)
+      document.querySelector('.travelersNames').innerHTML += "Traveler first name: " + travelers[i].firstName + " Traveler Last Name: " + travelers[i].lastName + "<br>"
     }
-
-    console.log("Your destination is " + destination.value + " departure date:" + departureDate.value + " and return date:" + returnDate.value)
+    document.querySelector('.destinationConfirmationBox').innerText = "Congratulations! We have booked your trip to " + destination.value
+    document.querySelector('.departureDateBox').innerText = departureDate.value;
+    document.querySelector('.returnDateBox').innerText = returnDate.value
+    submitTravelButton.style.display = "none";
+    document.querySelector('.userInfoContainer').style.display = "none";
   })
 
 
