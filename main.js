@@ -98,6 +98,8 @@ $(document).ready(function() {
     let UserMainContainer = document.querySelector('.userInfoContainer');
     let userNameInfoRows;
     let userNameButtonClosers;
+    let userInfoInnerContainer;
+
     if (travelersCheck.value === "") {
       toolTipAdder.style.display = "block";
     } else
@@ -128,24 +130,32 @@ $(document).ready(function() {
 
   submitTravelButton.addEventListener('click', function() {
     let travelers = [];
-    let travelDiv = document.querySelectorAll('.travelersDiv')
-    let userInfoRows = document.querySelectorAll('.userNameInfoRow')
     let fName = document.querySelectorAll('.firstName')
     let lName = document.querySelectorAll('.lastName')
+    document.querySelector('.selectionRow').innerHTML = "";
+    document.querySelector('.datePlanner').innerHTML = "";
+    document.querySelector('.userInfoContainer').innerHTML = "";
 
     for (let i = 0; i < fName.length; i++) {
       travelers.push({
         firstName: fName[i].value,
         lastName: lName[i].value
       })
-      document.querySelector('.travelersNames').innerHTML += "Traveler first name: " + travelers[i].firstName + " Traveler Last Name: " + travelers[i].lastName + "<br>"
+      document.querySelector('.selectionRow').innerHTML += "Traveler First Name: " + travelers[i].firstName + " | Last Name: " + travelers[i].lastName + "<br>"
     }
-    document.querySelector('.destinationConfirmationBox').innerText = "Congratulations! We have booked your trip to " + destination.value
-    document.querySelector('.departureDateBox').innerText = departureDate.value;
-    document.querySelector('.returnDateBox').innerText = returnDate.value
+    document.querySelector('.userInfoContainer').innerHTML = "Departure Date: " + departureDate.value + " | " + "Return Date: " + returnDate.value
+    document.querySelector('.datePlanner').innerHTML = "Destination: " + destination.value;
     submitTravelButton.style.display = "none";
-    document.querySelector('.userInfoContainer').style.display = "none";
+    document.querySelector('.bookTrip').classList.add('bookTripSubmit')
+    document.querySelector('.submitCloserButton').style.display = "block"
+    toastr.options.closeButton = true;
+    toastr.options.closeMethod = 'slideUp'
+    toastr.options.showMethod = 'slideDown'
+    toastr.success('Congratulations your trip to ' + destination.value + ' has been booked!', "You're All Set!")
+    let submitClosingButton = document.querySelector('.submitCloserButton');
+    submitClosingButton.addEventListener('click', function() {
+      document.querySelector('.bookTrip').style.display = "none"
+    })
   })
-
 
 })
