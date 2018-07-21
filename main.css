@@ -22,6 +22,18 @@ body {
   cursor: pointer;
 }
 
+.menuOption a {
+  cursor: pointer;
+  color: floralwhite;
+  font-family: 'Nobile', sans-serif;
+  font-size: 20px;
+}
+
+.menuOption:hover a {
+  color: #e6e6e6c7;
+  text-decoration: none;
+}
+
 .menuOption:hover {
   color: #e6e6e6c7;
 }
@@ -212,4 +224,15 @@ body {
 
 .submitCloserButton:hover {
   color: #e6e6e6c7;
+}
+
+.discoverDRContainer {
+  background-color: #96b9cc6b;
+  box-shadow: 1px 1px 5px 1px darkgrey;
+  color: #e2eae7;
+  display: none;
+  text-shadow: 1px 1px #519eaf;
+  animation: 0.8s fadeInBook forwards;
+  transition: animation;
+  transition-timing-function: ease-in-out;
 }

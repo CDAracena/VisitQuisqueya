@@ -29,10 +29,6 @@ $(document).ready(function() {
     }
   }
 
-
-
-  // The stuff below works just fine.
-
   SantoDomingoClicker.addEventListener('click', function() {
     axios.get('https://api.openweathermap.org/data/2.5/forecast?id=6201373&APPID=d2759249bf9ce3e1e3b6a45433e4299f')
       .then(function(response) {
@@ -94,9 +90,10 @@ $(document).ready(function() {
     return nameForms
   }
 
+
   travelersCheck.addEventListener('change', function() {
     let UserMainContainer = document.querySelector('.userInfoContainer');
-    let userNameInfoRows;
+    let userNameInfoRows ;
     let userNameButtonClosers;
     let userInfoInnerContainer;
 
@@ -107,6 +104,8 @@ $(document).ready(function() {
       toolTipAdder.style.display = "none";
       toolTipAdder.style.animationFillMode = "forwards";
     }
+
+
     for (let i = 0; i < travelersCheck.value; i++) {
       userInfoInnerContainer = document.createElement("DIV");
       UserMainContainer.appendChild(userInfoInnerContainer);
@@ -118,7 +117,9 @@ $(document).ready(function() {
           userNameInfoRows[j].style.display = "none";
         })
       }
+
     }
+
   })
 
 
@@ -157,5 +158,12 @@ $(document).ready(function() {
       document.querySelector('.bookTrip').style.display = "none"
     })
   })
+
+let discoverDR = document.querySelector('.discoverDRLink');
+
+discoverDR.addEventListener('click', function(){
+  document.querySelector('.discoverDRContainer').style.display="block"
+
+})
 
 })
