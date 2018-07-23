@@ -234,5 +234,45 @@ body {
   text-shadow: 1px 1px #519eaf;
   animation: 0.8s fadeInBook forwards;
   transition: animation;
+  transition-timing-function: 250ms ease-in-out;
+  font-family: 'Nobile', sans-serif;
+}
+
+.discoverDRheadRow {
+  padding-top: 15px;
+}
+
+.aboutRow {
+  padding-bottom: 15px;
+}
+
+.aboutCol {
+  background-color: #fcfcfc;
+  opacity: 0.9;
+  border-radius: 3px;
+  padding: 0px !important;
+}
+
+.aboutCol:hover {
+  box-shadow: 2px 2px 6px 5px darkgrey;
   transition-timing-function: ease-in-out;
+  transition: box-shadow;
+  cursor: pointer;
+}
+
+.aboutCol img {
+  width: 100%;
+  border-radius: 4px 3px 0px 0px;
+}
+
+.aboutHeadTitle {
+  padding: 15px 15px 15px 15px;
+  font-weight: bold;
+  color: #469aac59;
+}
+
+.aboutPara {
+  color: #469aac;
+  padding: 15px 0px 15px 15px;
+  text-shadow: 0px 0px;
 }
