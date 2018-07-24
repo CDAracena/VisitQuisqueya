@@ -166,4 +166,20 @@ discoverDR.addEventListener('click', function(){
 
 })
 
+let openModal = document.querySelectorAll('.aboutCol');
+let aboutTitle = document.querySelectorAll('.aboutHeadTitle');
+let closeModal = document.querySelector('.close');
+
+closeModal.addEventListener('click', function(){
+  document.querySelector('.modal').style.display="none"
+})
+
+for (let i = 0; i < openModal.length; i++){
+  openModal[i].addEventListener('click', function(){
+    document.querySelector('.modal').style.display="block"
+    document.querySelector('.modal-title').innerText = aboutTitle[i].innerText
+  })
+}
+
+
 })
