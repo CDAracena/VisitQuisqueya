@@ -281,3 +281,21 @@ body {
 .tainoIMG {
   height: 247px;
 }
+
+.modal {
+  background-color: #aac4cb59;
+  font-family: 'Nobile';
+}
+
+.modal-header {
+  background-color: #63a9b7;
+  color: floralwhite;
+}
+
+.modal-footer {
+  background-color: #62a9b7;
+}
+
+.modal-body {
+  background-color: #dbe4e747;
+}
