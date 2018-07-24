@@ -299,3 +299,8 @@ body {
 .modal-body {
   background-color: #dbe4e747;
 }
+
+.modalimgs {
+  height: 200px;
+  opacity: 0.8;
+}

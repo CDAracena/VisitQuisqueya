@@ -168,16 +168,36 @@ discoverDR.addEventListener('click', function(){
 
 let openModal = document.querySelectorAll('.aboutCol');
 let aboutTitle = document.querySelectorAll('.aboutHeadTitle');
-let closeModal = document.querySelector('.close');
+let closeModal = document.querySelectorAll('.close');
 
-closeModal.addEventListener('click', function(){
+for (let i = 0; i < closeModal.length; i++){
+closeModal[i].addEventListener('click', function(){
   document.querySelector('.modal').style.display="none"
 })
+}
+
+let aboutItems = [{
+  paragraph: "The music of the Dominican Republic is vibrant, colorful and heavily creolized. The sounds are often a combination of the island's indigenous, african and european roots.",
+  modalIMG1: 'guira.jpg',
+  modalIMG1Title: 'La Guira',
+  modalImg1Para: 'La Guira is a metalic instrument with 2 main components. The main component is a metalic cylinder with slight indentations inside and outside its base. The secondary component is a metalic forked tool that looks similar to an afro brush. ',
+  modalIMG2Title: 'Drums',
+  modalIMG2Para: 'Dominican musical genres consist of a variety of drums from bongos to "tamboras" (drums in Spanish. In bachata, the bongos are the most prominent forms of percussion. The bongos originate from the African continent. Certain debates are ongoing as to which particular region should be presented as its originator but the fact remains: The bongos are an African instrument that was brought to the Dominican Republic by African slaves.',
+  modalIMG2: 'bongos.jpg'
+}]
 
 for (let i = 0; i < openModal.length; i++){
   openModal[i].addEventListener('click', function(){
     document.querySelector('.modal').style.display="block"
     document.querySelector('.modal-title').innerText = aboutTitle[i].innerText
+    document.querySelector('.modalPara').innerText = aboutItems[i].paragraph
+    document.querySelector('.modal-IMG1').src = aboutItems[i].modalIMG1
+    document.querySelector('.img1Title').innerText = aboutItems[i].modalIMG1Title
+    document.querySelector('.IMG1Para').innerText = aboutItems[i].modalImg1Para
+    document.querySelector('.img2Title').innerText = aboutItems[i].modalIMG2Title
+    document.querySelector('.IMG2Para').innerText = aboutItems[i].modalIMG2Para
+    document.querySelector('.modal-IMG2').src = aboutItems[i].modalIMG2
+
   })
 }
 
