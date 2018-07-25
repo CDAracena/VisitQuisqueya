@@ -285,6 +285,7 @@ body {
 .modal {
   background-color: #aac4cb59;
   font-family: 'Nobile';
+  overflow: scroll !important;
 }
 
 .modal-header {
@@ -303,4 +304,11 @@ body {
 .modalimgs {
   height: 200px;
   opacity: 0.8;
+  box-shadow: 1px 1px 15px darkgrey;
+  width: 90%;
+}
+
+.modalPara {
+  font-weight: bold !important;
+  color: #62a9b7
 }

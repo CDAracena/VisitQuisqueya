@@ -183,7 +183,22 @@ let aboutItems = [{
   modalImg1Para: 'La Guira is a metalic instrument with 2 main components. The main component is a metalic cylinder with slight indentations inside and outside its base. The secondary component is a metalic forked tool that looks similar to an afro brush. ',
   modalIMG2Title: 'Drums',
   modalIMG2Para: 'Dominican musical genres consist of a variety of drums from bongos to "tamboras" (drums in Spanish. In bachata, the bongos are the most prominent forms of percussion. The bongos originate from the African continent. Certain debates are ongoing as to which particular region should be presented as its originator but the fact remains: The bongos are an African instrument that was brought to the Dominican Republic by African slaves.',
-  modalIMG2: 'bongos.jpg'
+  modalIMG2: 'bongos.jpg',
+  modalIMG3Title: 'Guitar',
+  modalIMG3Para: 'The Spanish guitar was introduced to the Dominican Republic by Spanish conquistadors. Typically a wooden base with a noticeable hole in the middle. Strings will be attached over the hole of the base and extend to an additional component.',
+  modalIMG3: 'guitar.jpg'
+},
+{
+  paragraph: "The history of the Dominican Republic is one characterized by its various Indigenous, African and European influences. Various unique time periods have led to the look and feel of contemporary Dominican Republic.",
+  modalIMG1: 'taino_natives.jpg',
+  modalIMG1Title: 'Tainos',
+  modalImg1Para: 'Taíno Indians, a subgroup of the Arawakan Indians (a group of American Indians in northeastern South America), inhabited the Greater Antilles (comprising Cuba, Jamaica, Hispaniola [Haiti and the Dominican Republic], and Puerto Rico) in the Caribbean Sea at the time when Christopher Columbus arrived to the New World.The Taíno culture impressed both the Spanish (who observed it) and modern sociologists. The Arawakan achievements included construction of ceremonial ball parks    whose boundaries were marked by upright stone dolmens, development of a universal language, and creation of a complicated religious cosmology.',
+  modalIMG2Title: 'Africans',
+  modalIMG2Para: 'In 1502 (or 1503), the Spanish Crown finally acquiesced to the colonists demands for enslaved Africans. A decade of intense exploitation and deadly waves of plagues had reduced the indigenous populations to levels that even the Spaniards considered dangerous. As the Hispaniolan Tainos (and Cigüayos) declined during the first couple of years of colonization, the Christopher Columbus Administration had gone against the wishes of Isabel I of Castile and had begun the first European slave trade on the western side of Atlantic. Raids that cleared out from Santo Domingo under the disguise of pacification and to evangelize nearby islanders had brought in other Amerindians to the colony. They were a large number of enslaved Lucayos from the Bahamas and Kalingas from the eastern islands. Now toiling alongside native Hispaniolans, these war captives became the first enslaved foreign workers on the island of Aytí, one of the indigenous names for the island that Columbus called Hispaniola',
+  modalIMG2: 'cuban_plantation.jpg',
+  modalIMG3Title: 'Spaniards',
+  modalIMG3Para: 'In April 1492, Cristobal Colon’s (the Spanish name for the explorer known as Christopher Columbus in English) conditions for the exploration of trade routes to India were accepted by the Spanish monarchs, King Fernando and Queen Isabel (Ferdinand II of Aragon and Isabella I of Castile). Columbus was given the titles of Viceroy, Admiral and Governor of the lands to be discovered, as well as 10% of the wealth obtained. Shortly after, in August 1492, Columbus left the port of Palos, Spain in search of a new trade route to India. After four months of aimless sailing across the Atlantic, Columbus finally had hope of making his voyage a success. Their first sighting of land was on 12th October, one of the islands of what is now the Bahamas. Columbus named it San Salvador, and then went on to explore Cuba. In December 1492, Columbus and his three ships, the Nina, the Pinta, and the Santa Maria landed on an island called Haiti/Quisqueya (the original Taino names for Hispaniola). This event, and the ensuing encounter with the island’s indigenous population, was to set off a chain of events that would affect world history for the next 500 years. ',
+  modalIMG3: 'columbus.jpg'
 }]
 
 for (let i = 0; i < openModal.length; i++){
@@ -197,6 +212,9 @@ for (let i = 0; i < openModal.length; i++){
     document.querySelector('.img2Title').innerText = aboutItems[i].modalIMG2Title
     document.querySelector('.IMG2Para').innerText = aboutItems[i].modalIMG2Para
     document.querySelector('.modal-IMG2').src = aboutItems[i].modalIMG2
+    document.querySelector('.img3Title').innerText = aboutItems[i].modalIMG3Title
+    document.querySelector('.IMG3Para').innerText = aboutItems[i].modalIMG3Para
+    document.querySelector('.modal-IMG3').src = aboutItems[i].modalIMG3
 
   })
 }
