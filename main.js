@@ -199,6 +199,19 @@ let aboutItems = [{
   modalIMG3Title: 'Spaniards',
   modalIMG3Para: 'In April 1492, Cristobal Colon’s (the Spanish name for the explorer known as Christopher Columbus in English) conditions for the exploration of trade routes to India were accepted by the Spanish monarchs, King Fernando and Queen Isabel (Ferdinand II of Aragon and Isabella I of Castile). Columbus was given the titles of Viceroy, Admiral and Governor of the lands to be discovered, as well as 10% of the wealth obtained. Shortly after, in August 1492, Columbus left the port of Palos, Spain in search of a new trade route to India. After four months of aimless sailing across the Atlantic, Columbus finally had hope of making his voyage a success. Their first sighting of land was on 12th October, one of the islands of what is now the Bahamas. Columbus named it San Salvador, and then went on to explore Cuba. In December 1492, Columbus and his three ships, the Nina, the Pinta, and the Santa Maria landed on an island called Haiti/Quisqueya (the original Taino names for Hispaniola). This event, and the ensuing encounter with the island’s indigenous population, was to set off a chain of events that would affect world history for the next 500 years. ',
   modalIMG3: 'columbus.jpg'
+},
+{
+  paragraph: "Santo Domingo, Punta Cana and Santiago all have beautiful sites for wandering travelers!",
+  modalIMG1: 'el_monumento.jpg',
+  modalIMG1Title: 'Santiago - El Monumento',
+  modalImg1Para: 'The Monumento a los héroes de la Restauración (Monument to the Heroes of the Restoration of the Republic) is located on a hill on the eastern side of the centre of Santiago de los Caballeros, at the most colorful and emblematic place of the city and one of the most visited ones in the Dominican Republic.',
+  modalIMG2: 'alcazar_colon.jpg',
+  modalIMG2Para: "The Alcázar de Colón, or Columbus Alcazar, located in Santo Domingo's Ciudad Colonial, Dominican Republic, is the oldest Viceregal residence in the Americas, and forms part of the Ciudad Colonial UNESCOs World Heritage Site.",
+  modalIMG2Title: 'Santo Domingo - Alcazar de Colon',
+  modalIMG3: 'Playa-Blanca.jpg',
+  modalIMG3Title: 'Punta Cana - Playa Blanca',
+  modalIMG3Para: 'Chic, cool and casual!  The Caribbean water is crystal clear, lagoon-like as you can walk for quite a distance without getting in over your head.  The water almost appears white in some areas.  The sand is oh so white, with palm trees and gardens lining the restaurant and beach.  There is an exquisite palm grove where private parties are catered to by Playa Blanca Restaurant. The tropical and international menu is excellent and the drinks divine!'
+
 }]
 
 for (let i = 0; i < openModal.length; i++){
