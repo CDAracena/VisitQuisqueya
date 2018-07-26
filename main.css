@@ -75,7 +75,7 @@ body {
 .bookTrip {
   background-color: #96b9cc6b;
   display: none;
-  box-shadow: -1px 1px 5px #e2dcdb;
+  box-shadow: 1px 1px 5px 1px darkgrey;
   color: #e2eae7;
   text-shadow: 1px 1px #519eaf;
 }
@@ -311,4 +311,43 @@ body {
 .modalPara {
   font-weight: bold !important;
   color: #62a9b7
+}
+
+.img1Title {
+  color: #62a9b7 !important;
+  font-weight: bold !important;
+}
+
+.img2Title {
+  color: #62a9b7 !important;
+  font-weight: bold !important;
+}
+
+.img3Title {
+  color: #62a9b7 !important;
+  font-weight: bold !important;
+}
+
+.IMG1Para {
+  padding: 15px 15px 15px 15px;
+}
+
+.IMG2Para {
+  padding: 15px 15px 15px 15px;
+}
+
+.IMG3Para {
+  padding: 15px 15px 15px 15px;
+}
+
+.img1Title {
+  padding: 15px 15px 15px 15px;
+}
+
+.img2Title {
+  padding: 15px 15px 15px 15px;
+}
+
+.img3Title {
+  padding: 15px 15px 15px 15px;
 }
