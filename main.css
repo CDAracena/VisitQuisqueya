@@ -11,6 +11,7 @@ body {
   color: floralwhite;
   font-family: 'Nobile', sans-serif;
   font-size: 20px;
+  opacity: 0.9;
 }
 
 .palmTree {
@@ -78,6 +79,7 @@ body {
   box-shadow: 1px 1px 5px 1px darkgrey;
   color: #e2eae7;
   text-shadow: 1px 1px #519eaf;
+  margin-bottom: 5px;
 }
 
 .tripSelector {
@@ -350,4 +352,13 @@ body {
 
 .img3Title {
   padding: 15px 15px 15px 15px;
+}
+
+@media screen and (max-width: 400px) {
+  .travelersDiv {
+    padding-top: 20px;
+  }
+  .locationPhotos {
+    padding-top: 15px;
+  }
 }
