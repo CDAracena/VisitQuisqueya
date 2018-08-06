@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   let tripBooker = document.querySelector('.bookATrip');
 
   tripBooker.addEventListener('click', function() {
@@ -144,7 +145,7 @@ $(document).ready(function() {
       })
       document.querySelector('.selectionRow').innerHTML += "Traveler First Name: " + travelers[i].firstName + " | Last Name: " + travelers[i].lastName + "<br>"
     }
-    document.querySelector('.userInfoContainer').innerHTML = "Departure Date: " + departureDate.value + " | " + "Return Date: " + returnDate.value
+    document.querySelector('.userInfoContainer').innerHTML = "Departure Date: " + moment(departureDate.value).format('MMM-Do-YYYY') + " | " + "Return Date: " + moment(returnDate.value).format('MMM-Do-YYYY')
     document.querySelector('.datePlanner').innerHTML = "Destination: " + destination.value;
     submitTravelButton.style.display = "none";
     document.querySelector('.bookTrip').classList.add('bookTripSubmit')
